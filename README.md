@@ -1,9 +1,29 @@
-# GLSLX support for Visual Studio Code
+# coc-glslx
 
-This adds support for the [GLSLX shader language](https://github.com/evanw/glslx) to [Visual Studio Code](https://code.visualstudio.com/). Features include inline errors, type tooltips, go-to-definition, symbol renaming, and format-on-save. It's [open source](https://github.com/evanw/glslx-vscode) and is published as [glslx-vscode](https://marketplace.visualstudio.com/items/evanw.glslx-vscode) on the Visual Studio Marketplace.
+This is a fork from Evanw for support of glslx on coc.nvim
 
-![](https://raw.githubusercontent.com/evanw/glslx-vscode/stuff/glslx.gif)
+This adds support for the [GLSLX shader language](https://github.com/evanw/glslx) to [coc.nvim](https://github.com/neoclide/coc.nvim). Features include inline errors, type tooltips, go-to-definition, symbol renaming, and format-on-save. It's [open source](https://github.com/Eric-Song-Nop/coc-glslx).
 
 ## Installation
 
-Open Visual Studio Code, click on the extensions tab, search for `glslx-vscode`, and click Install.
+Right now the plugin is not published on npm, so you need to install the plugin with plugin managers or full url from github.
+
+```vimscript
+" Take vim-plug as example
+" First install coc.nvim
+Plug 'neoclide/coc.nvim'
+
+" Then install coc-glslx
+Plug 'Eric-Song-Nop/coc-glslx'
+" Or use CocInstall
+" :CocInstall https://github.com/Eric-Song-Nop/coc-glslx
+```
+
+## Important Note
+**You need to register the file as glslx filetype so that the extension will take effect!**
+
+You can type the following in vim command line:
+
+```vimscript
+:set filetype=glslx
+```

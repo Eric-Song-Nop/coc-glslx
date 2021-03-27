@@ -1,16 +1,18 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 async function start(watch) {
   await require('esbuild').build({
-    entryPoints: ['src/index.ts'],
+    entryPoints: ['src/index.ts', 'src/server.ts'],
     bundle: true,
     watch,
     minify: process.env.NODE_ENV === 'production',
     sourcemap: process.env.NODE_ENV === 'development',
     mainFields: ['module', 'main'],
-    external: ['coc.nvim'],
+    external: ['coc.nvim', 'glslx','vscode-uri',
+      "vscode-languageserver-textdocument",
+      "vscode-languageserver"],
     platform: 'node',
-    target: 'node10.12',
-    outfile: 'lib/index.js',
+    target: 'node14.16',
+    outdir: './lib'
   });
 }
 
