@@ -8,7 +8,7 @@ This adds support for the [GLSLX shader language](https://github.com/evanw/glslx
 
 Right now the plugin is not published on npm, so you need to install the plugin with plugin managers or full url from github.
 
-```vimscript
+```viml
 " Take vim-plug as example
 " First install coc.nvim
 Plug 'neoclide/coc.nvim'
@@ -22,8 +22,13 @@ Plug 'Eric-Song-Nop/coc-glslx'
 ## Important Note
 **You need to register the file as glslx filetype so that the extension will take effect!**
 
-You can type the following in vim command line:
+You can use my vim-glslx plugin for syntax hilighting and filetype recongization: 
+```viml
+Plug 'Eric-Song-Nop/vim-glslx'
+```
 
-```vimscript
+Or if you don't want my plugin, you can type the following in vim command line to register a new filetype:
+
+```viml
 :set filetype=glslx
 ```
