@@ -5,23 +5,43 @@
   "publisher": "evanw",
   "repository": {
     "type": "git",
-    "url": "https://github.com/evanw/glslx-vscode"
+    "url": "https://github.com/eric-song-nop/coc-glslx"
   },
   "license": "MIT",
-  "engines": {
-    "vscode": "^1.52.0"
-  },
-  "categories": [
-    "Programming Languages"
+  "keywords": [
+    "coc.nvim"
   ],
+  "engines": {
+    "coc": "^0.0.80"
+  },
   "activationEvents": [
     "onLanguage:glslx"
   ],
   "scripts": {
-    "vscode:prepublish": "tsc"
+    "lint": "eslint src --ext ts",
+    "clean": "rimraf lib",
+    "watch": "node esbuild.js --watch",
+    "build": "node esbuild.js",
+    "prepare": "node esbuild.js"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120,
+    "semi": true
   },
   "main": "./src/extension",
   "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "coc-glslx configuration",
+      "properties": {
+        "coc-glslx.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable coc-glslx extension"
+        }
+      }
+    },
     "languages": [
       {
         "id": "glslx",
@@ -44,15 +64,19 @@
     ]
   },
   "dependencies": {
-    "glslx": "0.2.13",
-    "vscode-languageclient": "7.0.0",
-    "vscode-languageserver": "7.0.0",
-    "vscode-languageserver-textdocument": "1.0.1",
-    "vscode-uri": "1.0.0"
+    "glslx": "0.2.13"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
+    "coc.nvim": "^0.0.80",
+    "esbuild": "^0.8.42",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.2.0",
+    "rimraf": "^3.0.2",
     "@types/node": "14.14.22",
-    "@types/vscode": "1.52.0",
-    "typescript": "4.1.3"
+    "typescript": "^4.1.2"
   }
 }

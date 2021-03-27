@@ -1,8 +1,8 @@
 import * as path from 'path';
-import * as vscode from 'vscode';
-import * as client from 'vscode-languageclient/node';
+import * as coc from 'coc.nvim';
+import client from 'coc.nvim'
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context: coc.ExtensionContext) {
   let serverModule = path.join(__dirname, 'server.js');
 
   let serverOptions: client.ServerOptions = {
@@ -13,7 +13,7 @@ export function activate(context: vscode.ExtensionContext) {
   let clientOptions: client.LanguageClientOptions = {
     documentSelector: ['glslx'],
     synchronize: {
-      fileEvents: vscode.workspace.createFileSystemWatcher('**/*.glslx'),
+      fileEvents: coc.workspace.createFileSystemWatcher('**/*.glslx'),
     },
   };
 

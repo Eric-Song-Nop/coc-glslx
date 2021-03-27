@@ -1,9 +1,10 @@
 import * as fs from 'fs';
-import uri from 'vscode-uri';
+import Uri from 'coc.nvim';
+let uri = Uri;
 import * as path from 'path';
 import * as glslx from 'glslx';
-import * as server from 'vscode-languageserver/node';
-import { TextDocument } from 'vscode-languageserver-textdocument';
+import * as server from 'coc.nvim';
+import { TextDocument } from 'coc.nvim';
 
 let buildResults: () => Record<string, glslx.CompileResultIDE | undefined> = () => ({});
 let openDocuments: server.TextDocuments<TextDocument>;
