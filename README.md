@@ -6,17 +6,17 @@ This adds support for the [GLSLX shader language](https://github.com/evanw/glslx
 
 ## Installation
 
-Right now the plugin is not published on npm, so you need to install the plugin with plugin managers or full url from github.
+Right now the plugin is already published on npm, so you need to install the plugin with plugin managers or full url from github.
 
 ```viml
 " Take vim-plug as example
 " First install coc.nvim
 Plug 'neoclide/coc.nvim'
 
-" Then install coc-glslx
-Plug 'Eric-Song-Nop/coc-glslx'
-" Or use CocInstall
-" :CocInstall https://github.com/Eric-Song-Nop/coc-glslx
+" Then install coc-glslx using CocInstall
+:CocInstall coc-glslx
+" Or use Vim-Plug
+" Plug 'Eric-Song-Nop/coc-glslx'
 ```
 
 ## Important Note

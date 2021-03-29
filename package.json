@@ -1,7 +1,7 @@
 {
   "name": "coc-glslx",
   "description": "A fork of glslx-vscode for coc.nvim",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "publisher": "Ericoolen",
   "repository": {
     "type": "git",
