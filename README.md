@@ -1,4 +1,6 @@
-# coc-glslx
+# coc-glslx [Archived]
+
+## Sorry, but because I no longer use Coc.nvim any more, this repository won't be maintained any more. Hope you can find a better glsl language server!
 
 This is a fork from Evanw for support of glslx on coc.nvim
 
